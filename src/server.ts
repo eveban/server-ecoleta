@@ -9,10 +9,9 @@ const app = express();
 app.use(
   cors({
     origin: '*',
-    // methods: ['*'],
-    // responseHeader: ['Content-Type'],
-    // method: ['post'],
-    // maxAgeSeconds: 3600,
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    preflightContinue: false,
+    optionsSuccessStatus: 204,
   }),
 );
 app.use(express.json());
