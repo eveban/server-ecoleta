@@ -10,7 +10,7 @@ class ItemsController {
       return {
         id: item.id,
         title: item.title,
-        image_url: `https://187.9.38.148:3335/uploads/${item.image}`,
+        image_url: `https://ecoleta.pitstopcabines.com.br/uploads/${item.image}`,
       };
     });
     response.json(serialized);
