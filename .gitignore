@@ -1,5 +1,5 @@
 node_modules
-# !uploads/.gitkeep
+!uploads/.gitkeep
 uploads/*.JPG
 uploads/*.png
 
