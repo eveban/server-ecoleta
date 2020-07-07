@@ -4,7 +4,7 @@ import path from 'path';
 const connection = knex({
   client: 'mysql',
   connection: {
-    host: '187.9.38.148',
+    host: 'localhost',
     port: 14001,
     user: 'root',
     password: '123456',
