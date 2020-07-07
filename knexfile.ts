@@ -10,6 +10,7 @@ module.exports = {
     database: 'ecoleta',
   },
   useNullAsDefault: true,
+  // client: 'sqlite3',
   // connection: {
   //   filename: path.resolve(__dirname, 'src', 'database', 'database.sqlite'),
   // },
