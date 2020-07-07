@@ -6,7 +6,14 @@ import routes from './routes';
 
 const app = express();
 
-app.use(cors());
+// app.use(cors());
+
+const corsOptions = {
+  origin: '*', // client (todo mundo pode acessar)
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 

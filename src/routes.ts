@@ -22,9 +22,6 @@ routes.get('/points/:id', pointControler.show);
 
 routes.post(
   '/points',
-  function (request, response) {
-    response.set('Access-Control-Allow-Origin', '*');
-  },
   upload.single('image'),
   // celebrate(
   //   {
