@@ -1,16 +1,20 @@
-import Knex from 'knex'
+import Knex from 'knex';
 
-export async function up(knex: Knex){
-  return knex.schema.createTable('points_items',table => {
+export async function up(knex: Knex) {
+  return knex.schema.createTable('points_items', table => {
     table.increments('id').primary();
-
-    table.integer('points_id').notNullable();
+    /** mysql */
+    table.integer('points_id').notNullable().unsigned();
+    /** sqlite3 */
+    // table.integer('points_id').notNullable();
     table.foreign('points_id').references('id').inTable('points');
 
-    table.integer('items_id').notNullable();
-    table.foreign('items_id').references('id').inTable('items')
-  })
+    /** sqlite3 */
+    // table.integer('items_id).notNullable();
+    table.integer('items_id').notNullable().unsigned();
+    table.foreign('items_id').references('id').inTable('items');
+  });
 }
-export async function down(knex: Knex){
+export async function down(knex: Knex) {
   return knex.schema.dropTable('items');
 }

@@ -4,3 +4,4 @@ uploads/*.JPG
 uploads/*.png
 
 *.sqllite
+old_*
