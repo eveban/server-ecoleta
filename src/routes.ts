@@ -21,10 +21,10 @@ routes.get('/points', pointControler.index);
 routes.get('/points/:id', pointControler.show);
 
 routes.post(
-  '/points', function(request, response) {
+  '/points',
+  function (request, response) {
     response.set('Access-Control-Allow-Origin', '*');
-    // response.sendFile(__dirname + '/message.json');
-  });
+  },
   upload.single('image'),
   // celebrate(
   //   {
